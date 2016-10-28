@@ -1,12 +1,11 @@
 # API_ASCMV
 L'application web et mobile API_ASCMV est conçue pour répondre à plusieurs thématiques, qui sont : 
-* D'offrir un outil de travail, réaliste et ludique de mettre en oeuvre l'innovation technologique au service du culte (Musulman).
+* D'offrir un outil de travail, utilisant l'innovation technologique au service du culte (Musulman).
 * De proposer un moteur de recherche de pointe ,multilingue permettant de naviguer dans le coran dans plusieurs langues dont l'arabe Uthmani.
-* D'avoir une liste des horaires de prières pour l'Association Spinalienne Culturelle Musulmane des Vosges.
+* D'avoir une page horaires de prières pour l'Association Spinalienne Culturelle Musulmane des Vosges.
 * De proposer le site web gratuitement et librement téléchargeable et modifiable.
-* D'avoir une compatibilité totale avec android en tant qu'application.
-* D'avoir une compatibilité complète avec les différent navigateurs (au moins sur la page des horaires de prières).
-* D'offrir une fonctionnalité innovante : la reconnaissance vocale.
+* D'avoir une compatibilité avec les différent navigateurs (au moins sur la page des horaires de prières).
+* D'utiliser une fonctionnalité innovante : la reconnaissance vocale.
 
 ## Démonstration
 Le site est visualisable à cette adresse: [demo]
