@@ -9,8 +9,8 @@ Libre à vous de me contacter pour boire un thé ou pour du travail sur **contac
 Sincèrement,
 Thibaut LOMBARD.
 [comment]: #
-   [API_ASCMV]: <http://git.ctrlfagency.com/ctrlfagency/ASCMV/tree/master/API_ASCMV/>
-   [Quran-algorithme]: <http://git.ctrlfagency.com/ctrlfagency/ASCMV/tree/master/Quran-algorithme/>
+   [API_ASCMV]: <https://github.com/ctrlfagency/ASCMV/tree/master/ASCMV/API_ASCMV>
+   [Quran-algorithme]: <https://github.com/ctrlfagency/ASCMV/tree/master/ASCMV/Quran-algorithme>
 
 
 
