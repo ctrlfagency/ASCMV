@@ -1,0 +1,306 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="https://vocal.ascmv.net/img/favico.ico" type="image/x-icon">
+	<title><%= title %></title>
+    <!-- SEO Moteurs de recherche -->
+	<meta name="description" content="Grande Mosquée d'Epinal, site web ASCMV, l'Association Spinalienne culturelle Musulmane des Vosges">
+    <meta name="keywords" content="ASCMV,CORAN,CROYANTS,MUSULMANES,ASSOCIATION,EPINAL,CULTURELLE,ASSOCIATION MUSULMANE,VOSGES">
+	<meta name="robots" content="index,follow">
+	<meta name="copyright" content="ASCMV">   
+	<!-- SEO OpenGraph - FB -->
+	<meta property="og:title" content="ASCMV : Association Spinalienne Culturelle Musulmane des Vosges" />
+	<meta property="og:site_name" content="www.ascmv.net"/>
+	<meta property="og:url" content="https://www.ascmv.net" />
+	<meta property="og:description" content="Grande Mosquée d'Epinal, site web ASCMV, l'Association Spinalienne culturelle Musulmane des Vosges" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="article:tag" content="Grande Mosquée d'épinal" />
+	<meta property="article:tag" content="Masjid" />
+	<meta property="article:tag" content="Epinal" />
+	<meta property="article:tag" content="horaires de prières grande Mosquée d'épinal" />
+	<meta property="article:tag" content="prières mosquée d'epinal" />
+	<meta property="article:tag" content="horaires de prières épinal" />
+	<meta property="article:tag" content="coran grande mosquée épinal" />
+	<meta property="article:tag" content="versets mosquée epinal" />
+	<meta property="article:tag" content="aya mosquée epinal" />
+	<meta property="og:image" content="https://vocal.ascmv.net/img/og.png" />
+
+	<!-- SEO Twitter -->
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:description" content="Grande Mosquée d'Epinal, site web ASCMV, l'Association Spinalienne culturelle Musulmane des Vosges"/>
+	<meta name="twitter:title" content="ASCMV : Association Spinalienne Culturelle Musulmane des Vosges"/>
+	<meta name="twitter:domain" content="www.ascmv.net"/>
+	<meta name="twitter:image" content="https://vocal.ascmv.net/img/og.png"/>
+
+	<!-- Feuilles de styles de la page -->
+	<link type="text/css" href="css/bootstrap.3.3.4.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css" media="screen">
+	<link type="text/css" href="css/horaires.css" rel="stylesheet">
+   	<link type="text/css" href="css/nav.css" rel="stylesheet">
+
+    <script>
+	//chargement du script de reconaissance vocale annyang.js et annyang.min.js	
+ 	var annyangScript = document.createElement('script');
+  	if (/localhost/.exec(window.location)) {
+ 		annyangScript.src = "//vocal.ascmv.net/js/annyang.js"
+   			 } else {
+  		annyangScript.src = "//vocal.ascmv.net/js/annyang.min.js"
+  			}
+	document.write(annyangScript.outerHTML)
+ 	</script>
+  	<script src="js/jquery.2.1.3.min.js"></script>
+
+ 	<script>
+	//condition qui permet de forcer la page à se charger en https
+	if (window.location.protocol != "https:")
+	  window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+	
+	//début du code source dégeulasse
+	"use strict";
+	// On s'assure que annyang est chargé avec succès
+	if (annyang) {
+		// on définit la fonction de rechargement de la page
+		var rechargerpage = function() {
+		window.location.reload();
+			}
+		// on définit la page prenoms
+		var pageapi = function() {
+		document.location ='https://vocal.ascmv.net/api';
+			}
+		var vocalrecogn= function() {
+		document.location='https://vocal.ascmv.net/vocal';
+			}		
+		var searchengine = function() {
+		document.location ='https://vocal.ascmv.net/search';
+			}
+		// on définit la fonction  changement de page biorythme
+		var horairesdepriere = function() {
+		document.location='https://vocal.ascmv.net/';
+			}
+		var apropos = function() {
+		document.location='https://vocal.ctrlfagency.com/apropos';
+			}
+
+		// On charge les commandes
+		var commands = {
+		'interface de programmation':        pageapi,
+      	'reconnaissance vocale':      vocalrecogn,
+		'moteur de recherche':      searchengine,
+		'horaires de prières':      horairesdepriere,
+		'à propos':      				apropos,
+		'recharger la page':      rechargerpage
+			};
+
+	// Active le mode debug que nous pourrons par la suite visualiser dans la console (F12)
+	annyang.debug();
+
+    	// Ajoute les commandes de réponses
+	annyang.addCommands(commands);
+
+    	// Configure le langage: pour la reconaissance vocale (Anglais est par défaut)
+    annyang.setLanguage('fr-FR');
+
+    	// Démarre le mode listening, en cas d'échec, cela affiche le message d'erreur unsupported.
+ 	annyang.start();
+ 		} else {
+   		$(document).ready(function() {
+  		$('#unsupported').fadeIn('fast');
+		});
+		}
+	//définit la vitesse du scrollTo
+  	var scrollTo = function(identifier, speed) {
+    		$('html, body').animate({
+        	scrollTop: $(identifier).offset().top
+    		}, speed || 1000);
+  	}
+  	</script>
+</head>
+<body>
+<div class="navigation">
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+          <span class="sr-only">Développer</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="ASCMV - Association spinalienne culturelle musulmane des vosges">
+        </a>
+      </div>
+      <div id="navbar3" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="/">Accueil</a></li>
+          <li><a href="/vocal">Reconnaissance Vocale</a></li>
+          <li><a href="/search">Moteur de recherche</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">À propos <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/api">API</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Mentions Légales</li>
+              <li><a href="/site">Site Web</a></li>
+              <li><a href="/telechargement">Téléchargement & licences</a></li>
+             </ul>
+          </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+  </nav>
+</div>
+<!-- fin de navbar -->
+   <div class="mainform">
+        <div class="container">
+			<div class="row">
+				<div class="span9">
+                    <div class="content">
+                        <div class="module">
+                            <div class="module-head">
+                                <h3>Horaires de Prières</h3>
+                            </div>
+							<div class="module-body">
+								<table style="font-size: 2em;">
+								<tr>
+									<td><a onclick="displayMonth(-1);" class="arrow">&lt;&lt;</a></td>
+									<td id="table-title" class="caption"></td>
+									<td><a onclick="displayMonth(+1);" class="arrow">&gt;&gt;</a></td>
+								</tr>
+								</table>
+								<form class="form" action="javascript:update('UOIF');">
+									  <input type="hidden" id="method" value="UOIF">
+
+								</form>
+
+
+								<table id="timetable">
+									<tbody></tbody>
+								</table>
+
+								<div align="center" style="margin-top: 7px">
+									<strong>Salat Epinal (88000)</strong> |
+									Format de l'heure des prières : <a id="time-format" href="javascript:switchFormat(1)" title="Changer le format (12h/24h)" class="command"></a>
+								</div>
+
+								</div>
+                            </div>
+                        </div>
+                    </div><!-- content -->
+                </div>  <!--/.span9-->
+            </div>  <!--/.row-->
+		</div><!-- container -->
+    </div>
+    <div id="unsupported" class="hidden">
+	   <h4>Il semble que votre navigateur ne supporte pas la reconnaissance vocale.</h4>
+	   <p>Pensez à mettre à jour (chrome, internet explorer , safari ou firefox). N'oubliez pas d'autoriser les certificats ssl pour naviguer de manière sécurisée sur ce site <a href="https://vocal.ctrlfagency.com/">here.</a></p>
+	</div>
+	<script src="js/bootstrap.3.3.6.min.js"></script>
+    <script type="text/javascript" src="js/PrayTimes.js"></script>
+    <script type="text/javascript">
+	var currentDate = new Date();
+	var timeFormat = 0; 
+	switchFormat(0);
+	var dst = $('dst').value;
+	
+	// Règle l'offset
+	function displayMonth(offset) {
+		// Ajuster avec vos coordonnées décimales
+		var lat = 48.1667; 
+		var lng = 6.4333;
+		var timeZone = 1;
+		// Ajuster avec vos horaires de prières
+		var method = $('method').value;
+		prayTimes.setMethod(method);
+		currentDate.setMonth(currentDate.getMonth()+ 1* offset);
+		var month = currentDate.getMonth();
+		var year = currentDate.getFullYear();
+		var title = monthFullName(month)+ ' '+ year;
+
+		(method == "UOIF") ? prayTimes.tune( {fajr: -5, dhuhr: 5, isha: 5} ) : prayTimes.tune( {fajr: 0, dhuhr: 0, isha: 0} )
+		
+		$('table-title').innerHTML = title;
+		makeTable(year, month, lat, lng, timeZone, dst);
+	}
+
+		
+	// La timetable /mois
+	function makeTable(year, month, lat, lng, timeZone, dst) {		
+		var items = {day: '<span>اليوم</span><br>Date', fajr: '<span>الفجر</span><br>Fadjr', sunrise: '<span>الشروق</span><br>Shourouq', dhuhr: '<span>الظهر</span><br>Dhouhr', asr: '<span>العصر</span><br>\'Asr',  maghrib: '<span>المغرب</span><br>Maghrib', isha: '<span>العشاء</span><br>\'Isha'};
+				
+		var tbody = document.createElement('tbody');
+		tbody.appendChild(makeTableRow(items, items, 'head-row'));
+		var date = new Date(year, month, 1);
+		var endDate = new Date(year, month+ 1, 1);
+		var format = timeFormat ? '12hNS' : '24h';
+	
+	
+		while (date < endDate) {
+		var times = prayTimes.getTimes(date, [lat, lng], timeZone, dst, format);
+			var jour = new Array('Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam');
+			times.day = ((jour[date.getDay()])+" "+date.getDate());
+			var today = new Date(); 		
+			var isToday = (date.getMonth() == today.getMonth()) && (date.getDate() == today.getDate());
+			var isFriday = (date.getDay() == 5);
+			var klass = isToday ? 'today-row' : '';
+			var friday = isFriday ? 'vendredi-row' : '';
+			tbody.appendChild(makeTableRow(times, items, klass, friday));			
+			date.setDate(date.getDate()+ 1); // next day
+		}
+	
+		removeAllChild($('timetable'));
+		$('timetable').appendChild(tbody);
+	}
+
+	// table row
+	function makeTableRow(data, items, klass, friday) {
+		var row = document.createElement('tr');
+		row.className = "odd";
+		for (var i in items) {
+			var cell = document.createElement('td');
+			cell.innerHTML = data[i];
+			cell.style.width = i=='day' ? '1em' : '1em';
+			row.appendChild(cell);		
+		}
+		row.className = klass || friday
+		return row;
+		
+	}
+
+	// ôte les node héritante
+	function removeAllChild(node) {
+		if (node == undefined || node == null)
+			return;
+
+		while (node.firstChild)
+			node.removeChild(node.firstChild);
+	}
+
+	// Permet de changer le format de la date
+	function switchFormat(offset) {
+		var formats = ['24 heures', '12 heures'];
+		timeFormat = (timeFormat+ offset)% 2;
+		$('time-format').innerHTML = formats[timeFormat];
+		update();
+	}
+	
+
+	// mets à jour la table
+	function update() {
+		displayMonth(0);
+	}
+
+	// Renvoi le nom du mois courant
+	function monthFullName(month) {
+		var monthName = new Array('Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre');
+		return monthName[month];
+	}
+
+	function $(id) {
+		return document.getElementById(id);
+	}
+ </script>
+</body>
+</html>

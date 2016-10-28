@@ -1,0 +1,121 @@
+/* CSS Searbox et Autocompletion
+ * Copyleft - 2016 - 2017
+ * Author : Thibaut LOMBARD
+ * Contact : contact@ctrlfagency.com
+ * License : GNU - General Public License - GPL3
+ */
+#moteur{
+    margin:0 auto;  
+}
+#moteurresult{
+    margin:0 auto;  
+}
+/* règlage de la recherche avec autocomplete 
+ * utilisant jQuery UI 
+ * ******************************************/
+#search-query {
+    width:300px;
+    padding:5px 10px;
+    margin-left:10px;
+}
+/* autocompletion */
+ .ui-corner-all {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+.ui-menu {
+    border: 1px solid lightgray;
+    font-family: 'Arcon-Regular', regular;
+    font-size: 15px;
+    background-color: #fff;
+    width: 50%;
+}
+.ui-menu .ui-menu-item a {
+    color: #8BB110;
+}
+.ui-menu .ui-menu-item:hover {
+    display: block;
+    text-decoration: none;
+    color: #00C981;
+    cursor: pointer;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #8BB110;
+}
+.ui-widget-content .ui-state-hover, .ui-widget-content .ui-state-focus {
+    border: 1px solid #00C981;
+    background-image: none;
+    background-color: #fff;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Affichage de la search box responsive */
+#search-box {
+position: relative;
+width: 100%;
+margin: 0;
+}
+
+#search-form 
+{
+height: 40px;
+border: 1px solid #999;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background-color: #fff;
+overflow: hidden;
+}
+
+#search-text 
+{
+font-size: 14px;
+color: #ddd;
+border-width: 0;
+background: transparent;
+}
+
+#search-box input[type="text"]
+{
+width: 90%;
+padding: 11px 0 12px 1em;
+color: #333;
+outline: none;
+}
+
+#search-button {
+position: absolute;
+top: 0;
+right: 0;
+height: 42px;
+width: 80px;
+font-size: 14px;
+color: #fff;
+text-align: center;
+line-height: 42px;
+border-width: 0;
+background-color:#8bb110;
+-webkit-border-radius: 0px 5px 5px 0px;
+-moz-border-radius: 0px 5px 5px 0px;
+border-radius: 0px 5px 5px 0px;
+cursor: pointer;
+}
+.note-resultats p{
+  text-align:center;
+  color:#e3e3e3;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.note-resultats p a{
+  color:#00C981;
+  text-decoration:none;
+}
+#resultatayat { border: 1px solid; padding: 1em; }
+.aya { background:#ffffcc;  padding: 1em; }
+#resultatimg {text-align:right;}
+/* correction bug bootstrap3/jquery selection ID avec this impossible et ouverture
+ * de boite de dialogue */
+.modalclicked {
+}

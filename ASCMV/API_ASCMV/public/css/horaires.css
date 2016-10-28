@@ -1,0 +1,84 @@
+/*
+ * https://ascmv.net 
+ * Copyleft (c) 2016 - 2017
+ * Author :  Thibaut LOMBARD
+ * License :  GNU General Public License - GPL3
+ * Description : Quran - Praytimes & Search engine with vocal recognition features 
+ * Contact : contact@ctrlfagency.com
+*/
+		.timetable { border: 2px solid #8AC007; border-radius: 3px; margin: 0 auto;}
+		.timetable td {border-width: 1px; border-spacing: 1px; padding: 10px; border-style: outset; border-color: 1px solid black;}
+		.head-row {color: black; background-color: #8bb110; font-weight:bold;}
+		.today-row {background-color: #fff; color: black; font-weight:bold; border:2px solid black;}
+		.vendredi-row {background-color: #00c981; color: black; border:3px solid black;}
+		.todayvendredi-row {background-color: #8bb110; color: black; font-weight:bold; border:3px solid black;}
+
+		table {
+		  border: 1px solid #ccc;
+		  border-collapse: collapse;
+		  margin: 0;
+		  padding: 0;
+		  width: 100%;
+		  table-layout: fixed;
+		}
+		table caption {
+		  font-size: 1.5em;
+		  margin: .5em 0 .75em;
+		}
+		table tr {
+		  background: #f8f8f8;
+		  border: 1px solid #ddd;
+		  padding: .35em;
+		}
+		table th,
+		table td {
+		  padding: .625em;
+		  text-align: center;
+		  margin:auto;
+		}
+		table th {
+		  font-size: .85em;
+		  letter-spacing: .1em;
+		  text-transform: uppercase;
+		}
+		@media screen and (max-width: 600px) {
+		  table {
+			border: 0;
+		  }
+		  table caption {
+			font-size: 1.3em;
+		  }
+		  table thead {
+			border: none;
+			clip: rect(0 0 0 0);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute;
+			width: 1px;
+		  }
+		  table tr {
+			border-bottom: 3px solid #ddd;
+			display: block;
+			margin-bottom: .625em;
+		  }
+		  table td {
+			border-bottom: 1px solid #ddd;
+			display: table;
+			font-size: 1em;
+			text-align: center;
+		  }
+		  table td:before {
+			/*
+			* aria-label has no advantage, it won't be read inside a table
+			content: attr(aria-label);
+			*/
+			content: attr(data-label);
+			float: left;
+			font-weight: bold;
+			text-transform: uppercase;
+		  }
+		  table td:last-child {
+			border-bottom: 0;
+		  }

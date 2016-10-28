@@ -1,0 +1,29 @@
+{
+  "name": "API_ASCMV",
+  "version": "1.0.0",
+  "description": "Coran en arabe, français, anglais, horaires de prières , moteur de recherche et reconnaissance vocale",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: aucun test effectués\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.ctrlfagency.com/ctrlfagency/ctrlfagency.git"
+  },
+  "keywords": [
+    "ASCMV",
+    "API",
+    "VOCALRECOGNITION",
+    "SEARCHENGINE"
+  ],
+  "author": "Thibaut LOMBARD <contact@ctrlfagency.com> (https://ctrlfagency.com/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "http://git.ctrlfagency.com/ctrlfagency/ascmv/issues"
+  },
+  "homepage": "https://ascmv.net/",
+  "dependencies": {
+    "ejs": "*",
+    "express": "*"
+  }
+}

@@ -1,0 +1,516 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="https://vocal.ascmv.net/img/favico.ico" type="image/x-icon">
+	<title><%= title %></title>
+    <!-- SEO Moteurs de recherche -->
+	<meta name="description" content="Grande Mosquée d'Epinal, site web ASCMV, l'Association Spinalienne culturelle Musulmane des Vosges">
+    <meta name="keywords" content="ASCMV,CORAN,CROYANTS,MUSULMANES,ASSOCIATION,EPINAL,CULTURELLE,ASSOCIATION MUSULMANE,VOSGES">
+	<meta name="robots" content="index,follow">
+	<meta name="copyright" content="ASCMV">   
+	<!-- SEO OpenGraph - FB -->
+	<meta property="og:title" content="ASCMV : Association Spinalienne Culturelle Musulmane des Vosges" />
+	<meta property="og:site_name" content="www.ascmv.net"/>
+	<meta property="og:url" content="https://www.ascmv.net" />
+	<meta property="og:description" content="Grande Mosquée d'Epinal, site web ASCMV, l'Association Spinalienne culturelle Musulmane des Vosges" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="article:tag" content="Grande Mosquée d'épinal" />
+	<meta property="article:tag" content="Masjid" />
+	<meta property="article:tag" content="Epinal" />
+	<meta property="article:tag" content="horaires de prières grande Mosquée d'épinal" />
+	<meta property="article:tag" content="prières mosquée d'epinal" />
+	<meta property="article:tag" content="horaires de prières épinal" />
+	<meta property="article:tag" content="coran grande mosquée épinal" />
+	<meta property="article:tag" content="versets mosquée epinal" />
+	<meta property="article:tag" content="aya mosquée epinal" />
+	<meta property="og:image" content="https://vocal.ascmv.net/img/og.png" />
+
+	<!-- SEO Twitter -->
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:description" content="Grande Mosquée d'Epinal, site web ASCMV, l'Association Spinalienne culturelle Musulmane des Vosges"/>
+	<meta name="twitter:title" content="ASCMV : Association Spinalienne Culturelle Musulmane des Vosges"/>
+	<meta name="twitter:domain" content="www.ascmv.net"/>
+	<meta name="twitter:image" content="https://vocal.ascmv.net/img/og.png"/>
+
+	<!-- Feuilles de styles de la page -->
+	<link type="text/css" href="css/bootstrap.3.3.4.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css" media="screen">
+   	<link type="text/css" href="css/nav.css" rel="stylesheet">
+   	<link type="text/css" href="css/font.css" rel="stylesheet">
+	<link type="text/css" href="css/search.css" rel="stylesheet">
+	<link type="text/css" href="css/horaires.css" rel="stylesheet">
+	
+    <script>
+	//chargement du script de reconaissance vocale annyang.js et annyang.min.js	
+ 	var annyangScript = document.createElement('script');
+  	if (/localhost/.exec(window.location)) {
+ 		annyangScript.src = "//vocal.ascmv.net/js/annyang.js"
+   			 } else {
+  		annyangScript.src = "//vocal.ascmv.net/js/annyang.min.js"
+  			}
+	document.write(annyangScript.outerHTML)
+ 	</script>
+  	<script src="js/jquery.2.1.3.min.js"></script>
+
+ 	<script>
+	//condition qui permet de forcer la page à se charger en https
+	if (window.location.protocol != "https:")
+	  window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+	
+	//début du code source dégeulasse
+	"use strict";
+	// On s'assure que annyang est chargé avec succès
+	if (annyang) {
+		// on définit la fonction de rechargement de la page
+		var rechargerpage= function() {
+		window.location.reload();
+			}
+		// on définit la page prenoms
+		var pageapi= function() {
+		document.location='https://vocal.ascmv.net/api';
+			}
+		var vocalrecogn= function() {
+		document.location='https://vocal.ascmv.net/vocal';
+			}		
+		var searchengine= function() {
+		document.location='https://vocal.ascmv.net/search';
+			}
+		// on définit la fonction  changement de page biorythme
+		var horairesdepriere= function() {
+		document.location='https://vocal.ascmv.net/';
+			}
+		var apropos = function() {
+		document.location='https://vocal.ctrlfagency.com/apropos';
+			}
+		
+		var showres = function (tag){
+			var tableresult = 	$('#tableresult');
+			var moteurresult = 	$('#moteurresult');
+
+			var term = tag;
+			$('#tableresult').contents().remove();
+			$('#moteurresult').contents().remove();
+			tableresult.html('<caption>Résultat(s)</caption><thead><tr><th scope="col">Verset(s)</th><th scope="col"> Sourate/Verset </th></tr></thead><tbody id="searchres"></tbody>');
+			moteurresult.html('<p class="note-resultats" style="text-align:center;">Nombre de résultats : 0 </p>');
+			$.ajax({
+														url : "https://api.ascmv.net/search/api/mode/classiclimit-ALL/q/"+term+"/limit/300/callback/?",
+														dataType:"jsonp",
+														jsonp:"callback",
+														success:function(data)
+															{	
+																var searchres = document.getElementById('searchres');
+																var tableauaya = data.aya;
+																
+																for (var i=0; i<10; i++) {
+																var dai = data.aya[i];
+																var termtolow = decodeURIComponent(term).toLowerCase();
+																var rgxp = new RegExp(termtolow, 'g');
+																var repl = '<b>'+termtolow+'</b>';
+																var highlightedaya = dai.replace(rgxp, repl);
+																var donnees = '<tr><td data-label="" style="text-align:left;">'+highlightedaya+'</td><td data-label=""><a class="btn btn-lg btn-success modalclicked" name="'+data.surat[i]+'" data-toggle="modal" data-target="#basicModal" onclick="$(this).attr(\'name\');$(this).attr(\'id\');modaled(name,id);" id="'+data.id[i]+'">'+data.surat[i]+' / '+data.ayanumber[i]+'</a></td></tr>';
+      
+
+																searchres.innerHTML += donnees; 
+																}
+																$('#moteurresult').contents().remove();
+																//le total d'entrées
+																var numbertotal = data.totalquery;
+																//arrondi le total d'entré à la dizaine supérieure
+																var maxnumber = Math.ceil(numbertotal / 10) * 10;
+																// divise le chiffre à la dizaine supérieure par 10 pour obtenir un entier
+																var maxnumberinteger = (maxnumber / 10);
+																// Récupère le nombre de pages
+
+																moteurresult.html('<p class="note-resultats" style="text-align:center;"><br>Nombre de résultats : <a>'+numbertotal+'</a></p><p id="nbpage" style="text-align:center;"></p>');
+																var nbpage = document.getElementById('nbpage');
+																for (var i = 0; i < maxnumberinteger; i++) {
+																	 var ifoisdix = i * 10;
+																	 var iplusun = i + 1;
+																	 //	$(\'#id'+iplusun+'\').click(lafonction(\''+encodeURI(term)+'\',\''+ifoisdix+'\'));
+
+																	 var lesdata = ' | <a id="idpage'+iplusun+'" onclick="choixmultipage(\''+term+'\',\''+ifoisdix+'\');"> '+iplusun+' </a> |';
+																	 nbpage.innerHTML += lesdata;
+																 }
+																scrollTo("#containertable");
+
+																	
+															}
+					});
+			};//fin de fonction choix
+			function choixmultipage(term,thenumber){
+			var term = decodeURIComponent(term);
+			var nombre = Number(thenumber);
+			var thenumberplusdix = nombre+10;
+			var tableresult = 	$('#tableresult');
+			var moteurresult = 	$('#moteurresult');
+			$('#tableresult').contents().remove();
+			tableresult.html('<caption>Résultat(s)</caption><thead><tr><th scope="col">Verset(s)</th><th scope="col"> Sourate/Verset </th></tr></thead><tbody id="searchres"></tbody>');
+			$.ajax({
+														url : "https://api.ascmv.net/search/api/mode/classiclimit-ALL/q/"+term+"/limit/300/callback/?",
+														dataType:"jsonp",
+														jsonp:"callback",
+														success:function(data)
+															{	
+																var searchres = document.getElementById('searchres');
+																var tableauaya = data.aya;
+
+																for (var i=nombre; i<thenumberplusdix; i++) {
+																var dai = data.aya[i];
+																var termtolow = decodeURIComponent(term).toLowerCase();
+																var rgxp = new RegExp(termtolow, 'g');
+																var repl = '<b>'+termtolow+'</b>';
+																var highlightedaya = dai.replace(rgxp, repl);
+																var donnees = '<tr><td data-label="" style="text-align:left;">'+highlightedaya+'</td><td data-label=""><a class="btn btn-lg btn-success modalclicked" onclick="$(this).attr(\'name\');$(this).attr(\'id\');modaled(name,id);" name="'+data.surat[i]+'" data-toggle="modal" data-target="#basicModal" id="'+data.id[i]+'">'+data.surat[i]+' / '+data.ayanumber[i]+'</a></td></tr>';
+																searchres.innerHTML += donnees; 
+																}													
+																	
+															}
+					});
+			}
+			function modaled(name,numerovers) {
+				var name=Number(name);
+				var numerovers=Number(numerovers);
+				// On change les données contenu dans la boite de dialogue modal
+				// Lorsque celle-ci s'affiche
+				$("#basicModal").on('shown.bs.modal', function (e) {
+					var modalbody = 	$('#modal-body');
+					var mymodallabel = $('#myModalLabel');
+					$('#myModalLabel').contents().remove();
+					$('#modal-body').contents().remove();
+					function getsuratByNumber(numerosourate) {
+						var numerosourate = Number(numerosourate)-1;
+						var lestitres = [
+							"Al Fatiha (L\'ouverture)",
+							"Al Baqara (La vache)",
+							"Al \'Imran (La famille d\'Imran)",
+							"An-Nisa (Les femmes)",
+							"Al Ma-ida (La table servie)",
+							"Al An\'am (Les bestiaux)",
+							"Al A\'raf (Le mur d\'A\'raf)",
+							"Al Anfal (Le butin)",
+							"At-Tawba (Le repentir)",
+							"Yunus (Jonas)",
+							"Hud",
+							"Yusuf (Joseph)",
+							"Ar-Ra\'d (Le tonnerre)",
+							"Ibrahim (Abraham)",
+							"Al Hijr",
+							"An-Nahl (Les abeilles)",
+							"Al Isra (Le voyage nocturne)",
+							"Al Kahf (La caverne)",
+							"Maryam (Marie)",
+							"Ta-Ha",
+							"Al Anbya (Les proph\u00e8tes)",
+							"Al Hajj (Le p\u00e9lerinage)",
+							"Al Muminoon (Les croyants)",
+							"An-Noor (La lumi\u00e8re)",
+							"Al Furqan (Le discernement)",
+							"Ash-Shu\'ara (Les po\u00e8tes)",
+							"An-Naml (Les fourmis)",
+							"Al Qasas (Le r\u00e9cit)",
+							"Al \'Ankabut (L\'araign\u00e9e)",
+							"Ar-Rum (Les romains)",
+							"Luqman",
+							"As-Sajda (La prosternation)",
+							"Al Ahzab (Les coalis\u00e9s)",
+							"Saba",
+							"Al Fatir (Le Cr\u00e9ateur)",
+							"Ya-Sin",
+							"As-Saffat (Les rang\u00e9s)",
+							"Sad",
+							"Az-Zoumar (Les groupes)",
+							"Al Ghafir (Le Pardonneur)",
+							"Fussilat (Les versets d\u00e9taill\u00e9s)",
+							"Ash-Shura (La consultation)",
+							"Az-Zukhruf (L\'ornement)",
+							"Ad-Dukhan (La fum\u00e9e)",
+							"Al Jathiya (L\'agenouill\u00e9e)",
+							"Al Ahqaf",
+							"Muhammad",
+							"Al Fath (La victoire \u00e9clatante)",
+							"Al Hujurat (Les appartements)",
+							"Qaf",
+							"Ad-Dariyat (Qui \u00e9parpillent)",
+							"At-Tur",
+							"An-Najm (L\'\u00e9toile)",
+							"Al Qamar (La lune)",
+							"Ar-Rahman (Le Mis\u00e9ricordieux)",
+							"Al Waqi\'a (L\'\u00e9v\u00e8nement)",
+							"Al Hadid (Le fer)",
+							"Al Mujadala (La discussion)",
+							"Al Hashr (L\'exode)",
+							"Al Mumtahana (L\'\u00e9prouv\u00e9e)",
+							"As-Saff (Les rangs)",
+							"Al Jumu\'a (Le vendredi)",
+							"Al Munafiqoon (Les hypocrites)",
+							"At-Taghabun (La grande perte)",
+							"At-Talaq (Le divorce)",
+							"At-Tahrim (L\'interdiction)",
+							"Al Mulk (La royaut\u00e9)",
+							"Al Qalam (La plume)",
+							"Al Haqqah (Celle qui montre la v\u00e9rit\u00e9)",
+							"Al Ma\'arij (Les voies d\'ascension)",
+							"Nuh (No\u00e9)",
+							"Al Jinn",
+							"Al Muzzammil (L\'envelopp\u00e9)",
+							"Al Muddathir (Le rev\u00eatu d\'un manteau)",
+							"Al Qiyama (LA r\u00e9surrection)",
+							"Al Insan (L\'homme)",
+							"Al Mursalat (Les envoy\u00e9s)",
+							"An-Naba (La nouvelle)",
+							"An-Nazi\'at (Les anges qui arrachent les \u00e2mes)",
+							"\'Abasa (Il s\'est renfrogn\u00e9)",
+							"At-Takweer (L\'obscursissement)",
+							"Al Infitar (La rupture)",
+							"Al Mutaffifin (Les fraudeurs)",
+							"Al Inshiqaq (La d\u00e9chirure)",
+							"Al Buruj (Les constellations)",
+							"At-Tariq (L\'astre nocturne)",
+							"Al A\'la (Le Tr\u00e8s-Haut)",
+							"Al Ghashiya (L\'enveloppante)",
+							"Al Fajr (L\'aube)",
+							"Al Balad (La cit\u00e9)",
+							"Ash-Shams (Le soleil)",
+							"Al Layl (La nuit)",
+							"Ad-Duha (Le jour montant)",
+							"Ash-Sharh (L\'ouverture)",
+							"At-Teen (Le figuier)",
+							"Al \'Alaq (L\'adh\u00e9rence)",
+							"Al Qadr (La destin\u00e9e)",
+							"Al Bayyina (La preuve)",
+							"Al Zalzala (La secousse)",
+							"Al \'adiyat (Les coursiers)",
+							"Al Qari\'a (Le fracas)",
+							"At-Takathur (La course aux richesses)",
+							"Al \'Asr (Le temps)",
+							"Al Humaza (Les calomniateurs)",
+							"Al Fil (L\'\u00e9l\u00e9phant)",
+							"Quraysh (Les Quraysh)",
+							"Al Ma\'un (L\'ustensile)",
+							"Al Kawthar (L\'abondance)",
+							"Al kafiroon (Les infid\u00e8les)",
+							"An-Nasr (Le secours)",
+							"Al Masad (Les fibres)",
+							"Al Ikhlas (Le monoth\u00e9isme pur)",
+							"Al Falaq (L\'aube naissante)",
+							"An-Nas (Les gens)"
+						];
+						return lestitres[numerosourate];
+					}
+					var labeltosuratname = getsuratByNumber(name);
+					mymodallabel.html(labeltosuratname);
+					modalbody.html('<h3>surate '+name+' verset '+numerovers+'</h3><div id="resultatayat"><p id="resultatayatuth">Veuillez sélectionner un nombre entre 1 et 6236 (versets). </p><p id="resultatimg"></p><p id="resultatrecitation"></p><p id="resultatayatfr"></p><p id="resultatayaten"></p></div>');
+					
+						$.ajax({
+									url : "https://api.ascmv.net/hadith/api/mode/UTH-NUMBERS/num/"+numerovers+"/callback/?",
+									dataType:"jsonp",
+									jsonp:"callback",
+									success:function(data)
+									{
+										var eleme = $('#resultatayatuth');
+								var numsourate = data.numsurateUTH;
+								var ayat = data.numayatUTH;
+								eleme.html( '<b>Ayat numero :</b> '+numerovers+'<br><b>Sourate :</b> '+data.numsurateUTH+'<br><b>Verset numero:</b>'+data.numayatUTH+'<br><b> Verset : </b><p class="surateuthman" dir="rtl" lang="ar" style="font-size:200%;    line-height: 200%;">'+data.versetUTH+'</p>');
+									ayatfr(numsourate, ayat);
+									recitation(numsourate, ayat);
+									eleme.className = 'aya';
+									}
+								});
+						function ayatfr(numsourate, ayat){
+
+						var elementfr = $('#resultatayatfr');
+						$.ajax({
+									url : "https://api.ascmv.net/hadith/api/mode/FR-AYATONLY/surat/"+numsourate+"/aya/"+ayat+"/callback/?",
+									dataType:"jsonp",
+									jsonp:"callback",
+									success:function(data)
+									{
+								
+								elementfr.html('<b>FR :</b> '+data.versetFR+'</p>');
+									ayaten(numsourate, ayat);
+										elementfr.className = 'aya';
+									}
+								});
+
+						}
+						function ayaten(numsourate, ayat){
+						var elementen = $('#resultatayaten');
+						$.ajax({
+									url : "https://api.ascmv.net/hadith/api/mode/EN-AYATONLY/surat/"+numsourate+"/aya/"+ayat+"/callback/?",
+									dataType:"jsonp",
+									jsonp:"callback",
+									success:function(data)
+									{
+								
+								elementen.html('<b>EN :</b> '+data.versetEN+'</p>');
+									loadimg(numsourate, ayat);
+										elementen.className = 'aya';
+									}
+								});
+
+						}
+						function loadimg(numsourate, ayat){
+						var elementimg = $('#resultatimg');
+						$.ajax({
+									url : "https://api.ascmv.net/hadith/api/mode/IMG-LOW/surat/"+numsourate+"/aya/"+ayat+"/callback/?",
+									dataType:"jsonp",
+									jsonp:"callback",
+									success:function(data)
+									{
+								
+								elementimg.html('<img src="'+data.imgurl+'" width="100%" />');
+										elementimg.className = 'aya';
+									}
+								});
+
+						}
+						function recitation(numsourate, ayat){
+						$('#resultrecitation').contents().remove();
+						var cheikh = 'HUSARY';
+						var elementrecitation = $('#resultatrecitation');
+						//autoplay="autoplay"
+						  
+								$.ajax({
+									url : "https://api.ascmv.net/hadith/api/mode/MP3-"+cheikh+"/surat/"+numsourate+"/aya/"+ayat+"/callback/?",
+									dataType:"jsonp",
+									jsonp:"callback",
+									success:function(data)
+									{
+								var cheikhtolower = cheikh.toLowerCase();
+								elementrecitation.html('<b>Cheikh '+cheikhtolower+'</b><br><audio controls style="width: 100%;"><source src="'+data.mp3+'" type="audio/mpeg">Votre navigateur ne supporte pas les balises audio.</audio>');
+										elementrecitation.className = 'aya';
+									}
+								}); 
+						}		
+				});	//modification de modal terminée   
+			}
+
+			
+			
+		// On charge les commandes
+		var commands = {
+		'recherche *search':      showres,
+		'interface de programmation':        pageapi,
+      	'reconnaissance vocale':      vocalrecogn,
+		'moteur de recherche':      searchengine,
+		'horaires de prières':      horairesdepriere,
+		'à propos':      				apropos,
+		'recharger la page':      rechargerpage
+			};
+
+	// Active le mode debug que nous pourrons par la suite visualiser dans la console (F12)
+	annyang.debug();
+
+    	// Ajoute les commandes de réponses
+	annyang.addCommands(commands);
+
+    	// Configure le langage: pour la reconaissance vocale (Anglais est par défaut)
+    annyang.setLanguage('fr-FR');
+
+    	// Démarre le mode listening, en cas d'échec, cela affiche le message d'erreur unsupported.
+ 	annyang.start();
+ 		} else {
+   		$(document).ready(function() {
+  		$('#unsupported').fadeIn('fast');
+		});
+		}
+	//définit la vitesse du scrollTo
+  	var scrollTo = function(identifier, speed) {
+    		$('html, body').animate({
+        	scrollTop: $(identifier).offset().top
+    		}, speed || 1000);
+  	}
+  	</script>
+	
+</head>
+<body>
+<div class="navigation">
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+          <span class="sr-only">Développer</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="ASCMV - Association spinalienne culturelle musulmane des vosges">
+        </a>
+      </div>
+      <div id="navbar3" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/vocal" class="active">Reconnaissance Vocale</a></li>
+          <li><a href="/search">Moteur de recherche</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">À propos <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/api">API</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Mentions Légales</li>
+              <li><a href="site">Site Web</a></li>
+              <li><a href="telechargement">Téléchargement & licences</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+  </nav>
+</div>
+<!-- fin de navbar -->
+   <div class="mainform">
+        <div class="container">
+			<div class="row">
+				<div class="span9">
+                    <div class="content">
+                        <div class="module">
+                            <div class="module-head">
+                                <h3>Reconnaissance vocale</h3>
+                            </div>
+											<div class="module-body">	
+														<div id="moteur">
+																<div id="search-box" class="centered">
+																	<div class="anime-icon centered"><i class="icon-voice" style="color:#00c981;"></i></div>
+																<h3><i>Dites "recherche" puis le(s) terme(s) à rechercher.</i></h3>
+
+																</div>
+														</div>
+														<div id="containertable">
+														<table id="tableresult">
+														</table>
+														</div>
+														<div id="moteurresult">
+																													
+														</div>
+														<!-- Boites de dialogue modal-->
+														<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+														  <div class="modal-dialog">
+															<div class="modal-content">
+															  <div class="modal-header">
+																<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																<h4 class="modal-title" id="myModalLabel">sourate</h4>
+															  </div>
+															  <div class="modal-body" id="modal-body">
+																<h3>Verset</h3>
+															  </div>
+															  <div class="modal-footer">
+																<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+															  </div>
+															</div>
+														  </div>
+														</div>
+														<!-- Fin boites de dialogue modal-->
+											</div><!-- Fin module-body -->
+						</div><!-- fin module -->
+					</div><!-- fin content -->
+				</div><!-- fin span9-->
+			</div><!-- fin row-->
+		</div><!-- container -->
+    </div><!-- fin mainform -->
+	<script src="js/bootstrap.3.3.6.min.js"></script>
+
+</body>
+</html>
