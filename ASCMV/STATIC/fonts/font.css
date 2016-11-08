@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Arcon-Regular';
+  src: url('Arcon-Regular.eot');
+  src: url('https://www.ascmv.net/fonts/Arcon-Regular.eot?#iefix') format('embedded-opentype'),
+       url('https://www.ascmv.net/fonts/Arcon-Regular.woff2') format('woff2'),
+       url('https://www.ascmv.net/fonts/Arcon-Regular.woff') format('woff'),
+       url('https://www.ascmv.net/fonts/Arcon-Regular.ttf') format('truetype'),
+       url('https://www.ascmv.net/fonts/Arcon-Regular.svg#Arcon-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+

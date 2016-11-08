@@ -1,0 +1,52 @@
+api.html [error opening dir]
+coranEN.html [error opening dir]
+coranFR.html [error opening dir]
+coranUTH.html [error opening dir]
+css
+├── bootstrap.3.3.4.min.css
+├── font.css
+├── horaires.css
+├── nav.css
+├── search.css
+└── theme.css
+favico.ico [error opening dir]
+fonts
+├── Arcon-Regular.eot
+├── Arcon-Regular.svg
+├── Arcon-Regular.ttf
+├── Arcon-Regular.woff
+├── Arcon-Regular.woff2
+├── font-awesome.css
+├── fontawesome-webfont.eot
+├── fontawesome-webfont.otf
+├── fontawesome-webfont.svg
+├── fontawesome-webfont.ttf
+├── fontawesome-webfont.woff
+└── font.css
+htaccess [error opening dir]
+img
+├── bg.png
+├── favico.ico
+├── glyphicons-halflings.png
+├── glyphicons-halflings-white.png
+├── logo.png
+├── mini_icon_say.png
+└── og.png
+index.html [error opening dir]
+js
+├── autocomplete.js
+├── bootstrap.3.3.6.min.js
+├── coranen.js
+├── coranfr.js
+├── coranuth.js
+├── jquery.2.1.3.min.js
+├── jquery-ui.min.js
+├── PrayTimes.js
+└── selectsearch.js
+licences.html [error opening dir]
+README.md [error opening dir]
+search.html [error opening dir]
+site.html [error opening dir]
+tree.txt [error opening dir]
+
+0 directories, 34 files

@@ -1,0 +1,215 @@
+/*
+ * https://ascmv.net 
+ * Copyleft (c) 2016 - 2017
+ * Author :  Thibaut LOMBARD
+ * License :  GNU General Public License - GPL3
+ * Description : Quran - Praytimes & Search engine with vocal recognition features 
+ * Contact : contact@ctrlfagency.com
+*/
+@font-face {
+    font-family: FontAwesome;
+    src: url(../fonts/fontawesome-webfont.eot);
+    src: url(../fonts/fontawesome-webfont.eot) format('embedded-opentype'), url(../fonts/fontawesome-webfont.woff) format('woff'), url(../fonts/fontawesome-webfont.ttf) format('truetype'), url(../fonts/fontawesome-webfont.svg) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+[class*=" icon-"],
+[class^=icon-] {
+    font-family: FontAwesome;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased
+}
+
+[class*=" icon-"]:before,
+[class^=icon-]:before {
+    text-decoration: inherit;
+    display: inline-block;
+    speak: none
+}
+
+.icon-large:before {
+    vertical-align: -10%;
+    font-size: 1.3333333333333333em
+}
+
+a [class*=" icon-"],
+a [class^=icon-] {
+    display: inline
+}
+
+[class*=" icon-"].icon-fixed-width,
+[class^=icon-].icon-fixed-width {
+    display: inline-block;
+    width: 1.1428571428571428em;
+    text-align: right;
+    padding-right: .2857142857142857em
+}
+
+[class*=" icon-"].icon-fixed-width.icon-large,
+[class^=icon-].icon-fixed-width.icon-large {
+    width: 1.4285714285714286em
+}
+.icon-faq:before {
+    content: "\f066"
+}
+.icon-lef:before {
+    content: "\f07e"
+}
+.icon-communication:before {
+    content: "\f076"
+}
+.icon-data-gouv:before {
+    content: "\f07e"
+}
+.icon-data:before {
+    content: "\f094"
+}
+.icon-voice:before {
+    content: "\f0b2"
+}
+.icon-sourds:before {
+    content: "\f18c"
+}
+.icon-dataviz:before {
+    content: "\f06e"
+}
+
+
+.icon-alerte:before {
+    content: "\f052"
+}
+.icon-earth:before {
+    content: "\f042"
+}
+.icon-blog:before {
+    content: "\f015"
+}
+
+.icon-protection:before {
+    content: "\f072"
+}
+
+.icon-script:before {
+    content: "\f0f6"
+}
+.icon-gitlab:before {
+    content: "\f00f"
+}
+.icon-openstreetmap:before {
+    content: "\f06f"
+}
+.icon-arcep:before {
+    content: "\f04f"
+}
+.icon-laposte:before {
+    content: "\f05f"
+}
+.icon-ctrlfagency:before {
+    content: "\f01f"
+}
+.icon-thibautlombardspace:before {
+    content: "\f03f"
+}
+
+.icon-github:before {
+    content: "\f092"
+}
+
+.icon-linkedin:before {
+    content: "\f0e1"
+}
+
+.icon-facebook:before {
+    content: "\f082"
+}
+
+.icon-googleplus:before {
+    content: "\f0d5"
+}
+
+.icon-twitter:before {
+    content: "\f081"
+}
+
+.anime-icon {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    border: 0 solid #C1272B;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out
+}
+
+.anime-icon i,
+.external-anime-icon i {
+    top: 25%;
+    left: 35%;
+    width: 70px;
+    height: 70px;
+    font-size: 70px
+}
+.internal-anime-icon i {
+    top: 25%;
+    left: 35%;
+    width: 90px;
+    height: 90px;
+    font-size: 90px;
+    margin: auto;
+    color: #C1272D;
+}
+
+.anime-icon i {
+    position: absolute;
+    margin-top: -35px;
+    margin-left: -25px;
+    color: #fbfbfb;
+    transition: all .6s ease-in-out .2s;
+    -moz-transition: all .6s ease-in-out .2s;
+    -webkit-transition: all .6s ease-in-out .2s;
+    -o-transition: all .6s ease-in-out .2s
+}
+
+.external-anime-icon i {
+    position: relative;
+    margin-top: 0;
+    margin-left: 1rm;
+    color: #C1272B;
+    transition: all .6s ease-in-out .2s;
+    -moz-transition: all .6s ease-in-out .2s;
+    -webkit-transition: all .6s ease-in-out .2s;
+    -o-transition: all .6s ease-in-out .2s
+}
+
+.anime:hover .anime-icon i {
+    transform: rotate(360deg) scale(1.2, 1.2);
+    -ms-transform: rotate(360deg) scale(1.2, 1.2);
+    -webkit-transform: rotate(360deg) scale(1.2, 1.2)
+}
+
+.anime:hover .anime-icon {
+    transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1)
+}
+
+.empty {
+    background: 0 0!important
+}
+.alerte-sms-icon  {
+color: #C1272B;
+}
+.alerte-sms-icon i {
+    top: 25%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 150px
+}

@@ -1,0 +1,262 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="favico.ico" type="image/x-icon">
+    <title>ASCMV : Association Spinalienne Culturelle Musulmane des Vosges - Coran en Arabe</title>
+    <!-- SEO Moteurs de recherche -->
+	<meta name="description" content="Grande Mosquée d'Epinal, site web ASCMV, l'Association Spinalienne culturelle Musulmane des Vosges">
+    <meta name="keywords" content="ASCMV,CORAN,CROYANTS,MUSULMANES,ASSOCIATION,EPINAL,CULTURELLE,ASSOCIATION MUSULMANE,VOSGES">
+	<meta name="robots" content="index,follow">
+	<meta name="copyright" content="ASCMV">   
+	<!-- SEO OpenGraph - FB -->
+	<meta property="og:title" content="ASCMV : Association Spinalienne Culturelle Musulmane des Vosges" />
+	<meta property="og:site_name" content="www.ascmv.net"/>
+	<meta property="og:url" content="https://www.ascmv.net" />
+	<meta property="og:description" content="Grande Mosquée d'Epinal, site web ASCMV, l'Association Spinalienne culturelle Musulmane des Vosges" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="article:tag" content="Grande Mosquée d'épinal" />
+	<meta property="article:tag" content="Masjid" />
+	<meta property="article:tag" content="Epinal" />
+	<meta property="article:tag" content="horaires de prières grande Mosquée d'épinal" />
+	<meta property="article:tag" content="prières mosquée d'epinal" />
+	<meta property="article:tag" content="horaires de prières épinal" />
+	<meta property="article:tag" content="coran grande mosquée épinal" />
+	<meta property="article:tag" content="versets mosquée epinal" />
+	<meta property="article:tag" content="aya mosquée epinal" />
+	<!-- SEO Twitter -->
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:description" content="Grande Mosquée d'Epinal, site web ASCMV, l'Association Spinalienne culturelle Musulmane des Vosges"/>
+	<meta name="twitter:title" content="ASCMV : Association Spinalienne Culturelle Musulmane des Vosges"/>
+	<meta name="twitter:domain" content="www.ascmv.net"/>
+	<!-- Feuilles de styles de la page -->
+	<link type="text/css" href="css/bootstrap.3.3.4.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css" media="screen">
+   	<link type="text/css" href="css/nav.css" rel="stylesheet">
+   	<link type="text/css" href="css/font.css" rel="stylesheet">
+	<!--<link type="text/css" href="css/search.css" rel="stylesheet">-->
+	<link type="text/css" href="css/horaires.css" rel="stylesheet">
+<style type="text/css">
+.modalclicked {
+}
+</style>
+
+</head>
+<body>
+<div class="navigation">
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+          <span class="sr-only">Développer</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="https://www.ascmv.net/images/logo.png" alt="ASCMV - Association spinalienne culturelle musulmane des vosges">
+        </a>
+      </div>
+      <div id="navbar3" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index">Accueil</a></li>
+          <li><a href="search">Moteur de recherche</a></li>
+			<li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Coran<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="active"><a href="coranUTH">Coran en Arabe</a></li>
+              <li><a href="coranFR">Coran en Français</a></li>
+              <li><a href="coranEN">Coran en Anglais(US)</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">À propos <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="api">API</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Mentions Légales</li>
+              <li><a href="site">Site Web</a></li>
+              <li><a href="licences">Licences</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+  </nav>
+</div>
+<!-- fin de navbar -->
+   <div class="mainform">
+        <div class="container">
+			<div class="row">
+				<div class="span9">
+                    <div class="content">
+                        <div class="module">
+                            <div class="module-head">
+                                <h3>Coran en Arabe</h3>
+                            </div>
+											<div class="module-body">	
+														<div id="moteur">
+																<div class="styled-select qrn">
+																<select id="surat" onchange="affichersurate();" class="selectpicker"> 
+																<option value="0">Sourates</option>
+																<option value="1">1 Al Fatiha (L'ouverture)</option>
+																<option value="2">2 Al Baqara (La vache)</option>
+																<option value="3">3 Al 'Imran (La famille d'Imran)</option>
+																<option value="4">4 An-Nisa (Les femmes)</option>
+																<option value="5">5 Al Ma-ida (La table servie)</option>
+																<option value="6">6 Al An'am (Les bestiaux)</option>
+																<option value="7">7 Al A'raf (Le mur d'A'raf)</option>
+																<option value="8">8 Al Anfal (Le butin)</option>
+																<option value="9">9 At-Tawba (Le repentir)</option>
+																<option value="10">10 Yunus (Jonas)</option>
+																<option value="11">11 Hud</option>
+																<option value="12">12 Yusuf (Joseph)</option>
+																<option value="13">13 Ar-Ra'd (Le tonnerre)</option>
+																<option value="14">14 Ibrahim (Abraham)</option>
+																<option value="15">15 Al Hijr</option>
+																<option value="16">16 An-Nahl (Les abeilles)</option>
+																<option value="17">17 Al Isra (Le voyage nocturne)</option>
+																<option value="18">18 Al Kahf (La caverne)</option>
+																<option value="19">19 Maryam (Marie)</option>
+																<option value="20">20 Ta-Ha</option>
+																<option value="21">21 Al Anbya (Les prophètes)</option>
+																<option value="22">22 Al Hajj (Le pélerinage)</option>
+																<option value="23">23 Al Muminoon (Les croyants)</option>
+																<option value="24">24 An-Noor (La lumière)</option>
+																<option value="25">25 Al Furqan (Le discernement)</option>
+																<option value="26">26 Ash-Shu'ara (Les poètes)</option>
+																<option value="27">27 An-Naml (Les fourmis)</option>
+																<option value="28">28 Al Qasas (Le récit)</option>
+																<option value="29">29 Al 'Ankabut (L'araignée)</option>
+																<option value="30">30 Ar-Rum (Les romains)</option>
+																<option value="31">31 Luqman</option>
+																<option value="32">32 As-Sajda (La prosternation)</option>
+																<option value="33">33 Al Ahzab (Les coalisés)</option>
+																<option value="34">34 Saba</option>
+																<option value="35">35 Al Fatir (Le Créateur)</option>
+																<option value="36">36 Ya-Sin</option>
+																<option value="37">37 As-Saffat (Les rangés)</option>
+																<option value="38">38 Sad</option>
+																<option value="39">39 Az-Zoumar (Les groupes)</option>
+																<option value="40">40 Al Ghafir (Le Pardonneur)</option>
+																<option value="41">41 Fussilat (Les versets détaillés)</option>
+																<option value="42">42 Ash-Shura (La consultation)</option>
+																<option value="43">43 Az-Zukhruf (L'ornement)</option>
+																<option value="44">44 Ad-Dukhan (La fumée)</option>
+																<option value="45">45 Al Jathiya (L'agenouillée)</option>
+																<option value="46">46 Al Ahqaf</option>
+																<option value="47">47 Muhammad</option>
+																<option value="48">48 Al Fath (La victoire éclatante)</option>
+																<option value="49">49 Al Hujurat (Les appartements)</option>
+																<option value="50">50 Qaf</option>
+																<option value="51">51 Ad-Dariyat (Qui éparpillent)</option>
+																<option value="52">52 At-Tur</option>
+																<option value="53">53 An-Najm (L'étoile)</option>
+																<option value="54">54 Al Qamar (La lune)</option>
+																<option value="55">55 Ar-Rahman (Le Miséricordieux)</option>
+																<option value="56">56 Al Waqi'a (L'évènement)</option>
+																<option value="57">57 Al Hadid (Le fer)</option>
+																<option value="58">58 Al Mujadala (La discussion)</option>
+																<option value="59">59 Al Hashr (L'exode)</option>
+																<option value="60">60 Al Mumtahana (L'éprouvée)</option>
+																<option value="61">61 As-Saff (Les rangs)</option>
+																<option value="62">62 Al Jumu'a (Le vendredi)</option>
+																<option value="63">63 Al Munafiqoon (Les hypocrites)</option>
+																<option value="64">64 At-Taghabun (La grande perte)</option>
+																<option value="65">65 At-Talaq (Le divorce)</option>
+																<option value="66">66 At-Tahrim (L'interdiction)</option>
+																<option value="67">67 Al Mulk (La royauté)</option>
+																<option value="68">68 Al Qalam (La plume)</option>
+																<option value="69">69 Al Haqqah (Celle qui montre la vérité)</option>
+																<option value="70">70 Al Ma'arij (Les voies d'ascension)</option>
+																<option value="71">71 Nuh (Noé)</option>
+																<option value="72">72 Al Jinn</option>
+																<option value="73">73 Al Muzzammil (L'enveloppé)</option>
+																<option value="74">74 Al Muddathir (Le revêtu d'un manteau)</option>
+																<option value="75">75 Al Qiyama (LA résurrection)</option>
+																<option value="76">76 Al Insan (L'homme)</option>
+																<option value="77">77 Al Mursalat (Les envoyés)</option>
+																<option value="78">78 An-Naba (La nouvelle)</option>
+																<option value="79">79 An-Nazi'at (Les anges qui arrachent les âmes)</option>
+																<option value="80">80 'Abasa (Il s'est renfrogné)</option>
+																<option value="81">81 At-Takweer (L'obscursissement)</option>
+																<option value="82">82 Al Infitar (La rupture)</option>
+																<option value="83">83 Al Mutaffifin (Les fraudeurs)</option>
+																<option value="84">84 Al Inshiqaq (La déchirure)</option>
+																<option value="85">85 Al Buruj (Les constellations)</option>
+																<option value="86">86 At-Tariq (L'astre nocturne)</option>
+																<option value="87">87 Al A'la (Le Très-Haut)</option>
+																<option value="88">88 Al Ghashiya (L'enveloppante)</option>
+																<option value="89">89 Al Fajr (L'aube)</option>
+																<option value="90">90 Al Balad (La cité)</option>
+																<option value="91">91 Ash-Shams (Le soleil)</option>
+																<option value="92">92 Al Layl (La nuit)</option>
+																<option value="93">93 Ad-Duha (Le jour montant)</option>
+																<option value="94">94 Ash-Sharh (L'ouverture)</option>
+																<option value="95">95 At-Teen (Le figuier)</option>
+																<option value="96">96 Al 'Alaq (L'adhérence)</option>
+																<option value="97">97 Al Qadr (La destinée)</option>
+																<option value="98">98 Al Bayyina (La preuve)</option>
+																<option value="99">99 Al Zalzala (La secousse)</option>
+																<option value="100">100 Al 'adiyat (Les coursiers)</option>
+																<option value="101">101 Al Qari'a (Le fracas)</option>
+																<option value="102">102 At-Takathur (La course aux richesses)</option>
+																<option value="103">103 Al 'Asr (Le temps)</option>
+																<option value="104">104 Al Humaza (Les calomniateurs)</option>
+																<option value="105">105 Al Fil (L'éléphant)</option>
+																<option value="106">106 Quraysh (Les Quraysh)</option>
+																<option value="107">107 Al Ma'un (L'ustensile)</option>
+																<option value="108">108 Al Kawthar (L'abondance)</option>
+																<option value="109">109 Al kafiroon (Les infidèles)</option>
+																<option value="110">110 An-Nasr (Le secours)</option>
+																<option value="111">111 Al Masad (Les fibres)</option>
+																<option value="112">112 Al Ikhlas (Le monothéisme pur)</option>
+																<option value="113">113 Al Falaq (L'aube naissante)</option>
+																<option value="114">114 An-Nas (Les gens)</option>
+																</select>
+																</div>
+														</div>
+														<div id="containertable">
+														<table id="tableresult">
+														</table>
+														</div>
+														<div id="moteurresult">
+																													
+														</div>
+														<!-- Boites de dialogue modal-->
+														<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+														  <div class="modal-dialog">
+															<div class="modal-content">
+															  <div class="modal-header">
+																<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																<h4 class="modal-title" id="myModalLabel">sourate</h4>
+															  </div>
+															  <div class="modal-body" id="modal-body">
+																<h3>Verset</h3>
+															  </div>
+															  <div class="modal-footer">
+																<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+															  </div>
+															</div>
+														  </div>
+														</div>
+														<!-- Fin boites de dialogue modal-->
+											</div><!-- Fin module-body -->
+						</div><!-- fin module -->
+					</div><!-- fin content -->
+				</div><!-- fin span9-->
+			</div><!-- fin row-->
+		</div><!-- container -->
+    </div><!-- fin mainform -->
+
+   	<script src="js/jquery.2.1.3.min.js"></script>
+   	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/bootstrap.3.3.6.min.js"></script>
+	<script src="js/coranuth.js"></script>
+	<script type="text/javascript">
+
+	</script>
+	<script src="js/selectsearch.js"></script>
+</body>
+</html>

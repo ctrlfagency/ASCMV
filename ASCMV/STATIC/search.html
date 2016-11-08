@@ -1,0 +1,146 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="favico.ico" type="image/x-icon">
+    <title>ASCMV : Association Spinalienne Culturelle Musulmane des Vosges - Moteur de recherche</title>
+    <!-- SEO Moteurs de recherche -->
+	<meta name="description" content="Grande Mosquée d'Epinal, site web ASCMV, l'Association Spinalienne culturelle Musulmane des Vosges">
+    <meta name="keywords" content="ASCMV,CORAN,CROYANTS,MUSULMANES,ASSOCIATION,EPINAL,CULTURELLE,ASSOCIATION MUSULMANE,VOSGES">
+	<meta name="robots" content="index,follow">
+	<meta name="copyright" content="ASCMV">   
+	<!-- SEO OpenGraph - FB -->
+	<meta property="og:title" content="ASCMV : Association Spinalienne Culturelle Musulmane des Vosges" />
+	<meta property="og:site_name" content="www.ascmv.net"/>
+	<meta property="og:url" content="https://www.ascmv.net" />
+	<meta property="og:description" content="Grande Mosquée d'Epinal, site web ASCMV, l'Association Spinalienne culturelle Musulmane des Vosges" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="article:tag" content="Grande Mosquée d'épinal" />
+	<meta property="article:tag" content="Masjid" />
+	<meta property="article:tag" content="Epinal" />
+	<meta property="article:tag" content="horaires de prières grande Mosquée d'épinal" />
+	<meta property="article:tag" content="prières mosquée d'epinal" />
+	<meta property="article:tag" content="horaires de prières épinal" />
+	<meta property="article:tag" content="coran grande mosquée épinal" />
+	<meta property="article:tag" content="versets mosquée epinal" />
+	<meta property="article:tag" content="aya mosquée epinal" />
+	<!-- SEO Twitter -->
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:description" content="Grande Mosquée d'Epinal, site web ASCMV, l'Association Spinalienne culturelle Musulmane des Vosges"/>
+	<meta name="twitter:title" content="ASCMV : Association Spinalienne Culturelle Musulmane des Vosges"/>
+	<meta name="twitter:domain" content="www.ascmv.net"/>
+	<!-- Feuilles de styles de la page -->
+	<link type="text/css" href="css/bootstrap.3.3.4.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css" media="screen">
+   	<link type="text/css" href="css/nav.css" rel="stylesheet">
+   	<link type="text/css" href="css/font.css" rel="stylesheet">
+	<link type="text/css" href="css/search.css" rel="stylesheet">
+	<link type="text/css" href="css/horaires.css" rel="stylesheet">
+<style type="text/css">
+.modalclicked {
+}
+</style>
+
+</head>
+<body>
+<div class="navigation">
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+          <span class="sr-only">Développer</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="https://www.ascmv.net/images/logo.png" alt="ASCMV - Association spinalienne culturelle musulmane des vosges">
+        </a>
+      </div>
+      <div id="navbar3" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index">Accueil</a></li>
+          <li class="active"><a href="search">Moteur de recherche</a></li>
+			<li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Coran<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="coranUTH">Coran en Arabe</a></li>
+              <li><a href="coranFR">Coran en Français</a></li>
+              <li><a href="coranEN">Coran en Anglais(US)</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">À propos <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="api">API</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Mentions Légales</li>
+              <li><a href="site">Site Web</a></li>
+              <li><a href="licences">Licences</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+  </nav>
+</div>
+<!-- fin de navbar -->
+   <div class="mainform">
+        <div class="container">
+			<div class="row">
+				<div class="span9">
+                    <div class="content">
+                        <div class="module">
+                            <div class="module-head">
+                                <h3>Moteur de recherche</h3>
+                            </div>
+											<div class="module-body">	
+														<div id="moteur">
+																<div id='search-box'>
+																<form action='#' id='search-form' method='#' target='_top'>
+																<input id='search-text' name='q' placeholder='Rechercher dans le coran.. ' type='text'/>
+																<button id='search-button' type='button'><span>Trouver</span></button>
+																</form>
+																</div>
+														</div>
+														<div id="containertable">
+														<table id="tableresult">
+														</table>
+														</div>
+														<div id="moteurresult">
+																													
+														</div>
+														<!-- Boites de dialogue modal-->
+														<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+														  <div class="modal-dialog">
+															<div class="modal-content">
+															  <div class="modal-header">
+																<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																<h4 class="modal-title" id="myModalLabel">sourate</h4>
+															  </div>
+															  <div class="modal-body" id="modal-body">
+																<h3>Verset</h3>
+															  </div>
+															  <div class="modal-footer">
+																<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+															  </div>
+															</div>
+														  </div>
+														</div>
+														<!-- Fin boites de dialogue modal-->
+											</div><!-- Fin module-body -->
+						</div><!-- fin module -->
+					</div><!-- fin content -->
+				</div><!-- fin span9-->
+			</div><!-- fin row-->
+		</div><!-- container -->
+    </div><!-- fin mainform -->
+
+   	<script src="js/jquery.2.1.3.min.js"></script>
+   	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/bootstrap.3.3.6.min.js"></script>
+   	<script src="js/autocomplete.js"></script>
+	<script src="js/selectsearch.js"></script>
+</body>
+</html>
