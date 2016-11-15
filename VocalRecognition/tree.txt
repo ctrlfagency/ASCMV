@@ -1,0 +1,52 @@
+.
+├── AndroidManifest.xml
+├── assets
+│   ├── index.html
+│   └── jquery.min.js
+├── java
+│   └── ctrlfagency
+│       └── com
+│           └── MainActivity.java
+├── README.md
+├── res
+│   ├── drawable
+│   │   ├── ic_launcher.png
+│   │   └── microphone.png
+│   ├── drawable-hdpi
+│   │   ├── ic_launcher.png
+│   │   └── microphone.png
+│   ├── drawable-ldpi
+│   ├── drawable-mdpi
+│   │   └── ic_launcher.png
+│   ├── drawable-xhdpi
+│   │   └── ic_launcher.png
+│   ├── drawable-xxhdpi
+│   │   └── ic_launcher.png
+│   ├── layout
+│   │   └── activity_main.xml
+│   ├── menu
+│   │   └── main.xml
+│   ├── mipmap-hdpi
+│   │   └── ic_launcher.png
+│   ├── mipmap-mdpi
+│   │   └── ic_launcher.png
+│   ├── mipmap-xhdpi
+│   │   └── ic_launcher.png
+│   ├── mipmap-xxhdpi
+│   │   └── ic_launcher.png
+│   ├── mipmap-xxxhdpi
+│   │   └── ic_launcher.png
+│   ├── values
+│   │   ├── colors.xml
+│   │   ├── dimens.xml
+│   │   ├── strings.xml
+│   │   └── styles.xml
+│   ├── values-v11
+│   │   └── styles.xml
+│   ├── values-v14
+│   │   └── styles.xml
+│   └── values-w820dp
+│       └── dimens.xml
+└── tree.txt
+
+22 directories, 27 files
